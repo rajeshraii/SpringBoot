@@ -19,7 +19,7 @@ public class UserController {
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         users.add(new User(1, "Rahul", "Kozhikode"));
-        users.add(new User(2, "John", "Bangalore"));
+        users.add(new User(2,"John", "Bangalore"));
         users.add(new User(3, "Sara", "Mumbai"));
         return users;
     }

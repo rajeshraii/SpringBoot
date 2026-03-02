@@ -8,7 +8,14 @@ public class Addition {
         this.num1=num1;
         this.num2=num2;
     }
-    public int sum(){
+    public int getNum1(){
+        return num1;
+    }
+    public int getNum2(){
+        return num2;
+    }
+
+    public int getSum(){
         return num1+num2;
     }
     
