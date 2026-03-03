@@ -6,34 +6,31 @@ public class Practice {
     private int marks;
     private String result;
 
+    public Practice(String name, int age, int marks) {
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
 
-    public Practice(String name,int age,int marks){
-        this.name=name;
-        this.age=age;
-        this.marks=marks;
-
-        if(marks>=50){
-            this.result="Pass";
+        if (marks >= 50) {
+            this.result = "Pass";
+        } else {
+            this.result = "Fail";
         }
-        else{
-            this.result="Fail";
-        }
-        }
+    }
 
-
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public int getMarks(){
+    public int getMarks() {
         return marks;
     }
 
-    public String getResult(){
+    public String getResult() {
         return result;
     }
 }
