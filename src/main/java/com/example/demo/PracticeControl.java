@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.apache.logging.log4j.internal.annotation.SuppressFBWarnings;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,11 @@ public class PracticeControl {
 
     @PostMapping("/practice")
     public Practice newPractice(@RequestBody Practice practice){
+        return practice;
+    }
+
+    @PostMapping("/practice/bulk")
+    public List<Practice> newPractices(@RequestBody List<Practice> practice){
         return practice;
     }
 }
