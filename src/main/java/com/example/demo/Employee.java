@@ -12,10 +12,10 @@ public class Employee {
         this.salary=salary;
 
     if(salary>50000){
-        this.result="High payning job";
+        this.result="High Payning Job";
     }
     else{
-        this.result="Lower Salary";
+        this.result="Low Paying Job";
     }
 }
     public String getName(){

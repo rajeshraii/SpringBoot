@@ -16,8 +16,8 @@ public class EmployeeService {
         return employees;
     }
 
-    public List<Employee> addEmployee(List<Employee> employeelist){
-        return employeelist;
+    public List<Employee> addEmployee(List<Employee> employeeslist){
+        return employeeslist;
 
     }
 }
