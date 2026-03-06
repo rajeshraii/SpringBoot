@@ -16,7 +16,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String name,double salary) {
+    public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
         if (salary > 50000) {
