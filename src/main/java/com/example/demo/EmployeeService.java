@@ -1,23 +1,20 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.ArrayList;
 
 @Service
 public class EmployeeService {
-    public List<Employee> getAllEmployees(){
-        List<Employee> employees =new ArrayList<>();
-        employees.add(new Employee("Alice",01,60000));
-        employees.add(new Employee("Trupthi",02,100000));
-        employees.add(new Employee("Bob",03,50000));
-        employees.add(new Employee("Soumya",04,70000));
-        employees.add(new Employee("Srujan",05,110000));
-        return employees;
+
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    public Employee addEmployee(Employee employee) {
+        return employeeRepository.save(employee);
     }
 
-    public List<Employee> addEmployee(List<Employee> employeeslist){
-        return employeeslist;
-
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
     }
 }

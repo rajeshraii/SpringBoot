@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "employees")
 public class Employee {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -13,34 +13,50 @@ public class Employee {
     private double salary;
     private String result;
 
-    public Employee(){}
-
-    public Employee(String name,int id,double salary){
-        this.name=name;
-        this.id=id;
-        this.salary=salary;
-
-    if(salary>50000){
-        this.result="High Payning Job";
+    public Employee() {
     }
-    else{
-        this.result="Low Paying Job";
+
+    public Employee(String name,double salary) {
+        this.name = name;
+        this.salary = salary;
+        if (salary > 50000) {
+            this.result = "High Paying Job";
+        } else {
+            this.result = "Low Paying Job";
+        }
     }
-}
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public Double getSalary(){
+    public Double getSalary() {
         return salary;
     }
 
-    public String getResult(){
+    public String getResult() {
         return result;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+        if (salary > 50000) {
+            this.result = "High Paying Job";
+        } else {
+            this.result = "Low Paying Job";
+        }
     }
 
 }
