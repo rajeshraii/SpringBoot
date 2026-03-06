@@ -20,12 +20,12 @@ public class PracticeControl {
     }
 
     @PostMapping("/practice")
-    public Practice newPractice(@RequestBody Practice practice){
+    public Practice newPractice(@RequestBody Practice practice) {
         return practice;
     }
 
     @PostMapping("/practice/bulk")
-    public List<Practice> newPractices(@RequestBody List<Practice> practice){
+    public List<Practice> newPractices(@RequestBody List<Practice> practice) {
         return practice;
     }
 }
