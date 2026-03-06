@@ -1,12 +1,21 @@
 package com.example.demo;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "employees")
 public class Employee {
-    private String name;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int salary;
+    private String name;
+    private double salary;
     private String result;
 
-    public Employee(String name,int id,int salary){
+    public Employee(){}
+
+    public Employee(String name,int id,double salary){
         this.name=name;
         this.id=id;
         this.salary=salary;
@@ -26,7 +35,7 @@ public class Employee {
         return id;
     }
 
-    public int getSalary(){
+    public Double getSalary(){
         return salary;
     }
 
