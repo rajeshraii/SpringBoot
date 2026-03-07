@@ -28,7 +28,7 @@ public class EmployeeService {
     //DELETE METHOD TO DELETE EMPLOYEE BY ID
     public String deleteEmployeeById(int id){
         employeeRepository.deleteById(id);
-        return "The Employee with id "+id+ "has been deleted";
+        return "The Employee with id "+id+ " has been deleted";
     }
 
     //THE UPDATE OPERATION
