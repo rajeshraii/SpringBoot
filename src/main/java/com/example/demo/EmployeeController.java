@@ -39,4 +39,10 @@ public class EmployeeController {
     public String deleteEmployeeById(@PathVariable int id){
         return employeeService.deleteEmployeeById(id);
     }
+
+    //PATCH UPDATE API
+    @PatchMapping("/employees/{salary}")
+    public Employee updateSalary(@PathVariable int id,@RequestParam double salary){
+        return employeeService.updateSalary(id,salary);
+    }
 }
