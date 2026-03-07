@@ -30,5 +30,16 @@ public class EmployeeService {
         employeeRepository.deleteById(id);
         return "The Employee with id "+id+ "has been deleted";
     }
-    
+
+    //THE UPDATE OPERATION
+    public Employee updateEmployee(int id,Employee updatedEmployee){
+        Employee existing = employeeRepository.findById(id).orElse(null);
+        if(existing !=null){
+            existing.setName(updatedEmployee.getName());
+            existing.setSalary(updatedEmployee.getSalary());
+            return employeeRepository.save(existing);
+        }
+        return null;
+    }
+
 }
