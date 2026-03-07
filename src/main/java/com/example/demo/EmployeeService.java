@@ -42,4 +42,14 @@ public class EmployeeService {
         return null;
     }
 
-}
+    //THE PATCHUP OPERATION
+    public Employee updateSalary(int id,double salary){
+        Employee existing = employeeRepository.findById(id).orElse(null);
+        if(existing !=null){
+            existing.setSalary(salary);
+            return employeeRepository.save(existing);
+        }
+        return null;
+    }
+
+    }
