@@ -22,9 +22,15 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 
-    //GET METHOD FOR ONE ID
+    //GET METHOD API FOR ONE ID
     @GetMapping("/employees/{id}")
     public Employee getEmployeeById(@PathVariable int id){
         return employeeService.getEmployeeById(id);
+    }
+
+    //UPDATE METHOD API
+    @PutMapping("/employees/{id}")
+    public Employee updateEmployee(@PathVariable int id,@RequestBody Employee employee){
+        return employeeService.updateEmployee(id,employee);
     }
 }
