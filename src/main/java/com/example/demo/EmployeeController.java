@@ -41,7 +41,7 @@ public class EmployeeController {
     }
 
     //PATCH UPDATE API
-    @PatchMapping("/employees/{salary}")
+    @PatchMapping("/employees/{id}/salary")
     public Employee updateSalary(@PathVariable int id,@RequestParam double salary){
         return employeeService.updateSalary(id,salary);
     }
