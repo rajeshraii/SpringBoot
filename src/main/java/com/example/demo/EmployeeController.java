@@ -57,4 +57,9 @@ public class EmployeeController {
                 employeeService.getEmployeesBySalaryRange(min, max));
     }
 
+    @GetMapping("/employees/{names}")
+    public List<Employee> getByName(@PathVariable String name){
+        return employeeService.getByName(name);
+    }
+
 }

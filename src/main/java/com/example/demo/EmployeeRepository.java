@@ -7,4 +7,5 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     List<Employee> findBySalaryBetween(double min, double max);
+    List<Employee> findByName(String name);
 }
