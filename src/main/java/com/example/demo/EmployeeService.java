@@ -58,7 +58,7 @@ public class EmployeeService {
     }
 
 
-    public List<Employee> getByName(String name){
-        return employeeRepository.findByName(name);
+    public List<Employee> getEmployeeByName(String name){
+        return employeeRepository.findByNameContaining(name);
     }
 }
