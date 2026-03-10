@@ -57,4 +57,8 @@ public class EmployeeService {
         return employeeRepository.findBySalaryBetween(min, max);
     }
 
+
+    public List<Employee> getByName(String name){
+        return employeeRepository.findByName(name);
+    }
 }
