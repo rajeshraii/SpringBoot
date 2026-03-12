@@ -70,6 +70,6 @@ public class EmployeeService {
 
     //CALLING 
     public List<Employee> getHighPayingList(){
-        return employeeRepository.findByHighPaying();
+        return employeeRepository.findByResult("High Paying Job");
     }
 }
