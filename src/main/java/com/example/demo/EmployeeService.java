@@ -58,7 +58,13 @@ public class EmployeeService {
     }
 
 
+    // API FOR GET THE DETAILS BY NAME
     public List<Employee> getEmployeeByName(String name){
         return employeeRepository.findByNameContaining(name);
+    }
+
+    //API TO GET THE EMPLOYEE COUNT
+    public long getCount(){
+        return employeeRepository.count();
     }
 }
