@@ -61,6 +61,10 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getByName(@RequestParam String name){
         return ResponseEntity.ok(employeeService.getEmployeeByName(name));
     }
-    
+
+    @GetMapping("/employees/count")
+    public long getCount(){
+        return employeeService.getCount();
+    }
 
 }
