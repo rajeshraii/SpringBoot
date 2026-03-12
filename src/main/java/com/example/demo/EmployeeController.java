@@ -57,14 +57,22 @@ public class EmployeeController {
                 employeeService.getEmployeesBySalaryRange(min, max));
     }
 
+    //API FOR GET THE DETAILS BY NAME
     @GetMapping("/employees/search")
     public ResponseEntity<List<Employee>> getByName(@RequestParam String name){
         return ResponseEntity.ok(employeeService.getEmployeeByName(name));
     }
 
+    //API TO GET THE COUNT
     @GetMapping("/employees/count")
     public long getCount(){
         return employeeService.getCount();
+    }
+
+    //API FOR GET THE HIGH PAYING DETAILS
+    @GetMapping("/employees/highpaying")
+    public List<Employee> getHighPayingList(){
+        return employeeService.getHighPayingList();
     }
 
 }

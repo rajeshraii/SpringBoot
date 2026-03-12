@@ -67,4 +67,9 @@ public class EmployeeService {
     public long getCount(){
         return employeeRepository.count();
     }
+
+    //CALLING 
+    public List<Employee> getHighPayingList(){
+        return employeeRepository.findByHighPaying();
+    }
 }
