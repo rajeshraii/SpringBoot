@@ -82,4 +82,9 @@ public class EmployeeService {
     public List<Employee> getSortedList(){
         return employeeRepository.findAllByOrderBySalaryDesc();
     }
+
+    //New Service to get the details by exact name
+    public List<Employee> getByName(String name){
+        return employeeRepository.findByName(name);
+    }
 }

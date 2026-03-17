@@ -87,4 +87,10 @@ public class EmployeeController {
         return employeeService.getSortedList();
     }
 
+    //API to get the Employee details by exact name
+    @GetMapping("/employees/find")
+    public List<Employee> getDetailsByName(String name){
+        return employeeService.getByName(name);
+    }
+
 }
