@@ -81,6 +81,10 @@ public class EmployeeController {
         return employeeService.getLowPayingList();
     }
 
-    //API to get the Employee deatails
+    //API to get the Employee details in sorted order
+    @GetMapping("/employees/sorted")
+    public List<Employee> getSortedDetails(){
+        return employeeService.getSortedList();
+    }
 
 }
