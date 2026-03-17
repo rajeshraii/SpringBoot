@@ -75,4 +75,12 @@ public class EmployeeController {
         return employeeService.getHighPayingList();
     }
 
+    //API to get the low paying details
+    @GetMapping("/employees/lowpaying")
+    public List<Employee> getLowPayingList(){
+        return employeeService.getLowPayingList();
+    }
+
+    //API to get the Employee deatails
+
 }

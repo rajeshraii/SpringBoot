@@ -72,4 +72,14 @@ public class EmployeeService {
     public List<Employee> getHighPayingList(){
         return employeeRepository.findByResult("High Paying Job");
     }
+
+    //New Service to get the LowPaying details
+    public List<Employee> getLowPayingList(){
+        return employeeRepository.findByResult("Low Paying Job");
+    }
+
+    //New Service to get the details in sorted order
+    public List<Employee> getSortedList(){
+        return employeeRepository.findAllByOrderBySalaryDesc();
+    }
 }

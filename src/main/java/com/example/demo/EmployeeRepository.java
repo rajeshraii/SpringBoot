@@ -9,4 +9,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     List<Employee> findBySalaryBetween(double min, double max);
     List<Employee> findByNameContaining(String name);
     List<Employee> findByResult(String result);
+    List<Employee> findAllByOrderBySalaryDesc();
 }
