@@ -47,7 +47,6 @@ public class EmployeeController {
         return employeeService.updateSalary(id, salary);
     }
 
-
     // API FOR SALARY RANGE
     @GetMapping("/employees/salary")
     public ResponseEntity<List<Employee>> getBySalaryRange(
@@ -57,39 +56,39 @@ public class EmployeeController {
                 employeeService.getEmployeesBySalaryRange(min, max));
     }
 
-    //API FOR GET THE DETAILS BY NAME
+    // API FOR GET THE DETAILS BY NAME
     @GetMapping("/employees/search")
-    public ResponseEntity<List<Employee>> getByName(@RequestParam String name){
+    public ResponseEntity<List<Employee>> getByName(@RequestParam String name) {
         return ResponseEntity.ok(employeeService.getEmployeeByName(name));
     }
 
-    //API TO GET THE COUNT
+    // API TO GET THE COUNT
     @GetMapping("/employees/count")
-    public long getCount(){
+    public long getCount() {
         return employeeService.getCount();
     }
 
-    //API FOR GET THE HIGH PAYING DETAILS
+    // API FOR GET THE HIGH PAYING DETAILS
     @GetMapping("/employees/highpaying")
-    public List<Employee> getHighPayingList(){
+    public List<Employee> getHighPayingList() {
         return employeeService.getHighPayingList();
     }
 
-    //API to get the low paying details
+    // API to get the low paying details
     @GetMapping("/employees/lowpaying")
-    public List<Employee> getLowPayingList(){
+    public List<Employee> getLowPayingList() {
         return employeeService.getLowPayingList();
     }
 
-    //API to get the Employee details in sorted order
+    // API to get the Employee details in sorted order
     @GetMapping("/employees/sorted")
-    public List<Employee> getSortedDetails(){
+    public List<Employee> getSortedDetails() {
         return employeeService.getSortedList();
     }
 
-    //API to get the Employee details by exact name
+    // API to get the Employee details by exact name
     @GetMapping("/employees/find")
-    public List<Employee> getDetailsByName(String name){
+    public List<Employee> getDetailsByName(String name) {
         return employeeService.getByName(name);
     }
 
