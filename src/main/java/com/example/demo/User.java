@@ -1,4 +1,5 @@
 package com.example.demo;
+
 public class User {
     private int id;
     private String name;
@@ -12,7 +13,15 @@ public class User {
     }
 
     // Getters
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public String getCity() { return city; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCity() {
+        return city;
+    }
 }
