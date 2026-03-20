@@ -57,34 +57,33 @@ public class EmployeeService {
         return employeeRepository.findBySalaryBetween(min, max);
     }
 
-
     // API FOR GET THE DETAILS BY NAME
-    public List<Employee> getEmployeeByName(String name){
+    public List<Employee> getEmployeeByName(String name) {
         return employeeRepository.findByNameContaining(name);
     }
 
-    //API TO GET THE EMPLOYEE COUNT
-    public long getCount(){
+    // API TO GET THE EMPLOYEE COUNT
+    public long getCount() {
         return employeeRepository.count();
     }
 
-    //CALLING 
-    public List<Employee> getHighPayingList(){
+    // CALLING
+    public List<Employee> getHighPayingList() {
         return employeeRepository.findByResult("High Paying Job");
     }
 
-    //New Service to get the LowPaying details
-    public List<Employee> getLowPayingList(){
+    // New Service to get the LowPaying details
+    public List<Employee> getLowPayingList() {
         return employeeRepository.findByResult("Low Paying Job");
     }
 
-    //New Service to get the details in sorted order
-    public List<Employee> getSortedList(){
+    // New Service to get the details in sorted order
+    public List<Employee> getSortedList() {
         return employeeRepository.findAllByOrderBySalaryDesc();
     }
 
-    //New Service to get the details by exact name
-    public List<Employee> getByName(String name){
+    // New Service to get the details by exact name
+    public List<Employee> getByName(String name) {
         return employeeRepository.findByName(name);
     }
 }
