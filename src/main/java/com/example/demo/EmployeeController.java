@@ -92,4 +92,10 @@ public class EmployeeController {
         return employeeService.getByName(name);
     }
 
+    //Api to get the details of last employee
+    @GetMapping("/employees/last")
+    public Employee getLastId(){
+        return employeeService.getLastId();
+    }
+
 }
