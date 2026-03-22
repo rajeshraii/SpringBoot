@@ -89,6 +89,6 @@ public class EmployeeService {
 
     //New Service to get the details of last inserted Id
     public Employee getLastId(){
-        return employeeRepository.findByLastId();
+        return employeeRepository.findAllByOrderByIdDesc();
     }
 }
