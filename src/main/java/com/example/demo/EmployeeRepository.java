@@ -16,5 +16,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     List<Employee> findByName(String name);
 
-    List<Employee> findByLastId();
+    Employee findByLastId();
 }

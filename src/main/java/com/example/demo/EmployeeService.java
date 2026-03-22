@@ -86,4 +86,9 @@ public class EmployeeService {
     public List<Employee> getByName(String name) {
         return employeeRepository.findByName(name);
     }
+
+    //New Service to get the details of last inserted Id
+    public Employee getLastId(){
+        return employeeRepository.findByLastId();
+    }
 }
